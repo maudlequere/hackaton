@@ -7,6 +7,7 @@ const k = kaplay({
     letterbox: true,
     physics: true,
     pixelFilter: true,
+    background:[0,0,0]
 });
 
 export default k;

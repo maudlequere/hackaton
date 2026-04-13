@@ -23,4 +23,6 @@ export default function loadAssets() {
     loadSprite("player-right-stand-2", "assets/sprites/player/stand_2_droite.png");
     loadSprite("player-right-walk-1", "assets/sprites/player/walk_1_droite.png");
     loadSprite("player-right-walk-2", "assets/sprites/player/walk_2_droite.png");
+
+    loadSprite("hotel_ville","assets/sprites/batiments/centre_ville/hotl_ville.png");
 }

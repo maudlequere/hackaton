@@ -69,7 +69,7 @@ if (goalButton) {
 const mapsData = {
     "foret": {
         sprite: "map_foret",
-        spawn: { x: 500, y: 500 },
+        spawn: {x:400,y:400 },
         collisions: [
             { x: 1, y: -2, w: 141, h: 158 },
             { x: 142, y: -2, w: 70, h: 65 },
@@ -105,6 +105,15 @@ const mapsData = {
         spawn: { x: 150, y: 400 },
         collisions: [],
         doors: [
+            { x: 1350, y: 200, w: 50, h: 100, nextScene: "centre_ville" } 
+        ]
+    },
+
+    "centre_ville": { // map à ajouter
+        sprite:"map_centre_ville",
+        spawn:{x:150, y:400},
+        collisions:[],
+        doors:[
             { x: 1350, y: 200, w: 50, h: 100, nextScene: "foret" } 
         ]
     }

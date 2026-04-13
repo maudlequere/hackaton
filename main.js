@@ -1,6 +1,71 @@
 import k from "./kaplay";
 import loadAssets from "./assets";
 
+const startMenu = document.getElementById("start-menu");
+const playButton = document.getElementById("btn-play");
+const keysButton = document.getElementById("btn-keys");
+const goalButton = document.getElementById("btn-goal");
+const keysPanel = document.getElementById("panel-keys");
+const goalPanel = document.getElementById("panel-goal");
+
+let gameReady = false;
+let gameStarted = false;
+
+const playerAnimationSets = {
+    down: {
+        idle: ["player-down-stand-1", "player-down-stand-2"],
+        walk: ["player-down-walk-1", "player-down-walk-2"]
+    },
+    up: {
+        idle: ["player-up-stand-1", "player-up-stand-2"],
+        walk: ["player-up-walk-1", "player-up-walk-2"]
+    },
+    left: {
+        idle: ["player-left-stand-1", "player-left-stand-2"],
+        walk: ["player-left-walk-1", "player-left-walk-2"]
+    },
+    right: {
+        idle: ["player-right-stand-1", "player-right-stand-2"],
+        walk: ["player-right-walk-1", "player-right-walk-2"]
+    }
+};
+
+function setPlayerFrame(player, spriteName) {
+    if (player.currentSprite === spriteName) return;
+
+    player.currentSprite = spriteName;
+    player.use(sprite(spriteName));
+}
+
+function togglePanel(panel) {
+    if (!panel) return;
+
+    const isOpen = !panel.hidden;
+    if (keysPanel) keysPanel.hidden = true;
+    if (goalPanel) goalPanel.hidden = true;
+    panel.hidden = isOpen;
+}
+
+function startGame() {
+    if (!gameReady || gameStarted) return;
+
+    gameStarted = true;
+    if (startMenu) startMenu.style.display = "none";
+    go("game", "foret");
+}
+
+if (playButton) {
+    playButton.addEventListener("click", startGame);
+}
+
+if (keysButton) {
+    keysButton.addEventListener("click", () => togglePanel(keysPanel));
+}
+
+if (goalButton) {
+    goalButton.addEventListener("click", () => togglePanel(goalPanel));
+}
+
 const mapsData = {
     "foret": {
         sprite: "map_foret",
@@ -83,29 +148,72 @@ scene("game", (levelName) => {
     }
 
     const player = add([
-        sprite("perso-bas"),
+        sprite("player-down-stand-1"),
         pos(data.spawn.x, data.spawn.y),
         anchor("center"),
         area(),
         body(),
         scale(0.1),
-        { speed: 300 }
+        {
+            speed: 300,
+            direction: "down",
+            currentSprite: "player-down-stand-1",
+            frameTime: 0,
+            frameIndex: 0
+        }
     ]);
 
     player.onCollide("door", (door) => {
         go("game", door.destination); 
     });
 
-    onKeyDown("left", () => { player.move(-player.speed, 0); player.use(sprite("perso-gauche")); });
-    onKeyDown("right", () => { player.move(player.speed, 0); player.use(sprite("perso-droite")); });
-    onKeyDown("up", () => { player.move(0, -player.speed); player.use(sprite("perso-haut")); });
-    onKeyDown("down", () => { player.move(0, player.speed); player.use(sprite("perso-bas")); });
-
     onUpdate(() => { 
+        let moveX = 0;
+        let moveY = 0;
+
+        if (isKeyDown("left")) {
+            moveX -= 1;
+            player.direction = "left";
+        }
+
+        if (isKeyDown("right")) {
+            moveX += 1;
+            player.direction = "right";
+        }
+
+        if (isKeyDown("up")) {
+            moveY -= 1;
+            player.direction = "up";
+        }
+
+        if (isKeyDown("down")) {
+            moveY += 1;
+            player.direction = "down";
+        }
+
+        const isMoving = moveX !== 0 || moveY !== 0;
+
+        if (isMoving) {
+            const movement = vec2(moveX, moveY).unit().scale(player.speed);
+            player.move(movement);
+        }
+
+        player.frameTime += dt();
+        const animationSpeed = isMoving ? 0.14 : 0.4;
+
+        if (player.frameTime >= animationSpeed) {
+            player.frameTime = 0;
+            player.frameIndex = (player.frameIndex + 1) % 2;
+        }
+
+        const animationSet = playerAnimationSets[player.direction];
+        const frameGroup = isMoving ? animationSet.walk : animationSet.idle;
+        setPlayerFrame(player, frameGroup[player.frameIndex]);
+
         setCamPos(player.pos); // Correction camPos suggérée par la console
     });
 });
 
 onLoad(() => {
-    go("game", "foret");
+    gameReady = true;
 });

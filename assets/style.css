@@ -1,0 +1,84 @@
+body {
+	margin: 0;
+	overflow: hidden;
+	background: radial-gradient(circle at top, #1d2f1a 0%, #0a1208 65%);
+	font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+}
+
+.menu-overlay {
+	position: fixed;
+	inset: 0;
+	display: grid;
+	place-items: center;
+	background: linear-gradient(140deg, rgba(8, 19, 8, 0.85), rgba(11, 41, 25, 0.78));
+	z-index: 10;
+}
+
+.menu-card {
+	width: min(92vw, 520px);
+	padding: 30px;
+	border-radius: 22px;
+	background: rgba(17, 34, 19, 0.92);
+	border: 2px solid #8bd07d;
+	box-shadow: 0 20px 70px rgba(0, 0, 0, 0.5);
+	color: #eaf6dc;
+}
+
+.menu-title {
+	margin: 0;
+	font-size: clamp(2rem, 6vw, 3rem);
+	text-align: center;
+	letter-spacing: 0.04em;
+}
+
+.menu-subtitle {
+	margin: 12px 0 24px;
+	text-align: center;
+	color: #b9e9ac;
+}
+
+.menu-actions {
+	display: grid;
+	gap: 12px;
+}
+
+.menu-btn {
+	border: 0;
+	border-radius: 14px;
+	padding: 16px;
+	font-size: 1.2rem;
+	font-weight: 700;
+	cursor: pointer;
+	color: #173118;
+	background: #b6e38e;
+	transition: transform 120ms ease, filter 120ms ease;
+}
+
+.menu-btn:hover {
+	transform: translateY(-1px);
+	filter: brightness(1.04);
+}
+
+.menu-btn.primary {
+	font-size: 1.5rem;
+	padding: 20px;
+	background: linear-gradient(90deg, #f9ffaf, #d4ff7f);
+}
+
+.info-panel {
+	margin-top: 16px;
+	padding: 14px;
+	border-radius: 12px;
+	background: rgba(0, 0, 0, 0.24);
+	border: 1px solid rgba(186, 234, 141, 0.45);
+}
+
+.info-panel h2 {
+	margin: 0 0 8px;
+	font-size: 1.1rem;
+}
+
+.info-panel p {
+	margin: 6px 0;
+	line-height: 1.4;
+}

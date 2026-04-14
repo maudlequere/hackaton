@@ -4,6 +4,7 @@ import centre_ville from "./assets/js/centre_ville.js";
 import plage_bas from "./assets/js/plage_bas.js";
 import loadcentreville from "./loadcentreville.js";
 import loadplage from "./loadplage.js";
+import plage_haut from "./assets/js/plage_haut.js";
 
 const k = kaplay({
     global: true,
@@ -70,7 +71,7 @@ function startGame() {
 
     gameStarted = true;
     if (startMenu) startMenu.style.display = "none";
-    go("game","plage_bas");
+    go("game","plage_haut");
 }
 
 if (playButton) {
@@ -91,6 +92,7 @@ loadPlayer();
 const levels = {
     "centre_ville": centre_ville,
     "plage_bas":plage_bas,
+    "plage_haut":plage_haut,
 };
 
 scene("game", (levelName) => {
@@ -109,7 +111,7 @@ scene("game", (levelName) => {
             tiles: data.tiles
         });
     }
-    if (data==plage_bas){
+    if (data==plage_bas || data==plage_haut){
         addLevel(data.map, {
             tileWidth: 64,
             tileHeight: 64,
@@ -206,8 +208,8 @@ scene("game", (levelName) => {
         keyText.text = `🔑 Nombre de clés : ${nb_key}`;
     });    
 
-    player.onCollide("door", (door) => {
-        go("game", door.destination); 
+    player.onCollide("teleporter", (teleporter) => {
+        go("game", teleporter.destination); 
     });
 
     // afficher le nombre de clé

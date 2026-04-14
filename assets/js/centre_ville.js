@@ -22,7 +22,7 @@ export default {
         "l_DUttttUHUGD",
         "vFfUthhtUBU%f",
         "SSS4thhtUv5S3",
-        "ttttthht5S4HU"
+        "ttttt*tt5S4HU"
     ],
     tiles:{
     // textures
@@ -266,16 +266,15 @@ export default {
             anchor("center"),
             scale(4)
         ],
-        // "*" : () => [
-        //     sprite("tp plage haut/gauche"),
-        //     scale(0.1),
-        //     anchor("center"),
-        // ],
-        // "§" : () => [
-        //     sprite("tp plage/???"),
-        //     scale(0.1),
-        //     anchor("center")
-        // ]
+        "*" : () => [
+            sprite("teleporter"),
+            scale(4),
+            body({isStatic:true}),
+            area(),
+            anchor("center"),
+            "teleporter",
+            {destination : "plage_haut"}
+        ]
     }
 }
 

@@ -30,5 +30,6 @@ export default function loadcentreville(){
     loadSprite("road_turn_3", "assets/sprites/centre_ville/road_tiles/road_turn_3.png");     
     loadSprite("road_turn_4", "assets/sprites/centre_ville/road_tiles/road_turn_4.png"); 
     loadSprite("road_up", "assets/sprites/centre_ville/road_tiles/road_up.png"); 
-
+    loadSprite("teleporter","assets/sprites/objets/teleporter.png");
+    loadSprite("teleporter2","assets/sprites/objets/teleporter.png")    
 }

@@ -1,27 +1,58 @@
 export default{
-    spawn: { x: 200, y: 200 },    
+    spawn: { x: 961, y: 1440 },    
     map :[
-  "EEEEEEEEEEEEEEEEEEEEEEEEEsssttt*tfvFGDi                                      ",
-  "EEEEEEEEEEEEEEEEEEEEEEEEEssssttUttF%%FG__i                                   ",
-  "EEEEEEEEEEEEEEEEEEEEEEEEEEtttttUttfFfF%v%G______i                            ",
-  "EEEEEEEEEEEEEEEEEEEEEEEEEEEttttUttttttfffF%F%f%FG_________________DabG______D",
-  "EEEEEEEEEEEEEEEEEEEEEEEEEEEttttUttttttttttfFfFff%fvf%f%F%FFF%Fv%Ff%cd%f%f%fv%",
-  "EEEEEEEEEEEEEEEEEEEEEEEEEEEEtttUttttttttttttttttfFfFFffvffFfFFfFFFfegFFvFfFfF",
-  "EEEEEEEEEEEEEEEEEEEEEEEEEEEEEttUttttttttttttttttttttttttttttttttttttttttttttt",
-  "EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEtUttttttttttGDtGDtGDtGDtGDtGDtGDttttttttttttttt",
-  "EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEtUttttttttttfFtFFtfFtfFtFFtfFtFfttttttttttttttt",
-  "EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEtUttttttttttttttttttttttttttttttttttttttttttttt",
-  "EEEEEEEEEEEEEEEEEEEEEEEEtttEEEt3SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSÂ§",
-  "EEEEEEEEEEEEEEEEEEEEEEEEttttttttttttttttttttttttttttttttttttttttttttttGDttttt",
-  "EEEEEEEEEEEEEEEEEEEEEEEEEtttttttttttttmnotttttttGDttGDttGDttttttttttttffttttt",
-  "EEEEEEEEEEEEEEEEEEEEEEEEEtttttGDttttttttttttttttfFttFFttfFttttttttttttttttttt",
-  "EEEEEEEEEEEEEEEEEEEEEEEEEtttttFfttttttttttttttttttttttttttttttttttttttttttttt",
-  "EEEEEEEEEEEEEEEEEEEEEEEEEtttttttttttGDttttttttttttttttttttEEEEEEEEEEEEEEEEEEE",
-  "EEEEEEEEEEEEEEEEEEEEEEEEEEstttttttttFFtttttttssssEEEEEEEEEEEEEEEEEEEEEEEEEEEE",
-  "EEEEEEEEEEEEEEEEEEEEEEEEEEssstttttttttttttsssssEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE",
-  "EEEEEEEEEEEEEEEEEEEEEEEEEEEsssssstttttttssssEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE",
-  "EEEEEEEEEEEEEEEEEEEEEEEEEEEEssssssssssssssEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE",
-  "EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEssssssssssEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE"
+  "EEEEEEEEEEEEEEEEEEEEEEst§TU               ",
+  "EEEEEEEEEEEEEEEEEEEEEssttBU               ",
+  "EEEEEEEEEEEEEEEEEEEEsssttTU               ",
+  "EEEEEEEEEEEEEEEEEEEssssttBU               ",
+  "EEEEEEEEEEEEEEEEEEEssssttTU               ",
+  "EEEEEEEEEEEEEEEEEEsssssttBU               ",
+  "EEEEEEEEEEEEEEEEEEsssssttTU               ",
+  "EEEEEEEEEEEEEEEEEsssssstt|U               ",
+  "EEEEEEEEEEEEEEEEEsssssstt|U               ",
+  "EEEEEEEEEEEEEEEEEssssssttBU               ",
+  "EEEEEEEEEEEEEEEEEssssssttTU               ",
+  "EEEEEEEEEEEEEEEEEssssssttBU               ",
+  "EEEEEEEEEEEEEEEEsss/&ssttTU               ",
+  "EEEEEEEEEEEEEEEEssssssstt|U               ",
+  "EEEEEEEEEEEEEEEEssssssstt|U               ",
+  "EEEEEEEEEEEEEEEEsss&/shttBU               ",
+  "EEEEEEEEEEEEEEEEsssssstttTU               ",
+  "EEEEEEEEEEEEEEEssssssshttBU               ",
+  "EEEEEEEEEEEEEEEssss//shttTU               ",
+  "EEEEEEEEEEEEEEEssssssstttBU               ",
+  "EEEEEEEEEEEEEEEssssssshttTU               ",
+  "EEEEEEEEEEEEEEsssss//shttBU               ",
+  "EEEEEEEEEEEEEEsssssssstttTU               ",
+  "EEEEEEEEEEEEEEsssssssshtt|U               ",
+  "EEEEEEEEEEEEEEssss/&/shtt|U               ",
+  "EEEEEEEEEEEEEssssssssshttBU               ",
+  "EEEEEEEEEEEEEssssssssshttTU               ",
+  "EEEEEEEEEEEEEssss&///shtt|U               ",
+  "EEEEEEEEEEEEEssssssssshtt|U               ",
+  "EEEEEEEEEEEEsssssssssshtt|U               ",
+  "EEEEEEEEEEEEsssss//&&sstt|U               ",
+  "EEEEEEEEEEEssssssssssssttBUG____D         ",
+  "EEEEEEEEEEEssssssssssssttTUfFfFfF         ",
+  "EEEEEEEEEEEssssssssssssttv3SSSS1f         ",
+  "EEEEEEEEEEsssssssssssssttttttttUB         ",
+  "EEEEEEEEEEsssssssssssssttG___DtUT         ",
+  "EEEEEEEEEssssssssssssssttfF%fFtUB         ",
+  "EEEEEEEEsssssssssssssssttttttttUT         ",
+  "EEEEEEEssssssssssssssssttttttttUB         ",
+  "EEEEEssssssssssssssssssttttttttUT         ",
+  "EEEEsssssssssssssssssssttttttttUB         ",
+  "EEsssssssssssssssssssssttttttttUT         ",
+  "sssssssssssssssssssssssttttttttUF         ",
+  "sssssssssssssssssssssssttttttttUGD        ",
+  "EEEEsssssssssssssssssssssttttttU%F        ",
+  "EEEEEEsssssssssssssssssssssttttUfFGD      ",
+  "EEEEEEEEEsssssssssssssEEEssstttUtF%%      ",
+  "EEEEEEEEEEEssssssssssEEEEssstttUtfvFGDi   ",
+  "EEEEEEEEEEEEsssssssssEEEEssssttUttF%%FG__i",
+  "EEEEEEEEEEEEEsssssssEEEEEEtttttUttfFfF%v%G",
+  "EEEEEEEEEEEEEEEsssEEEEEEEEEttttUttttttfffF",
+  "EEEEEEEEEEEEEEEEssEEEEEEEEEtttt*tttttttttt"
 ],    
     tiles:{
     // textures
@@ -46,20 +77,22 @@ export default{
             scale(2)
         ],
 
-        // cabane plage
-        "c" : () => [
-            sprite("shipowner_house_0_1"),
+
+        "/" : () => [
+            sprite("beach_cabin_1"),
             area(),
             body({ isStatic: true }),
             anchor("center"),
-            scale(2)
+            scale(2),
+            "cabane_1"
         ],
-        "d" : () => [
-            sprite("shipowner_house_1_1"),
+        "&" : () => [
+            sprite("beach_cabin_2"),
             area(),
             body({ isStatic: true }),
             anchor("center"),
-            scale(2)
+            scale(2),
+            "cabane_2"
         ],
         "T" : () => [
             sprite("toitbouthaut"),
@@ -161,55 +194,7 @@ export default{
             anchor("center"),
             scale(2)
         ],
-        "a" : () => [
-            sprite("shipowner_house_0_0"),
-            area(),
-            body({ isStatic: true }),
-            anchor("center"),
-            scale(2)
-        ],
-        "b" : () => [
-            sprite("shipowner_house_1_0"),
-            area(),
-            body({ isStatic: true }),
-            anchor("center"),
-            scale(2)
-        ],
-        "e" : () => [
-            sprite("shipowner_house_0_2"),
-            area(),
-            body({ isStatic: true }),
-            anchor("center"),
-            scale(2)
-        ],
-        "g" : () => [
-            sprite("shipowner_house_1_2"),
-            area(),
-            body({ isStatic: true }),
-            anchor("center"),
-            scale(2)
-        ],
-        "m" : () => [
-            sprite("modern_art_museum_0_0"),
-            area(),
-            body({ isStatic: true }),
-            anchor("center"),
-            scale(2)
-        ],
-        "n" : () => [
-            sprite("modern_art_museum_1_0"),
-            area(),
-            body({ isStatic: true }),
-            anchor("center"),
-            scale(2)
-        ],
-        "o" : () => [
-            sprite("modern_art_museum_2_0"),
-            area(),
-            body({ isStatic: true }),
-            anchor("center"),
-            scale(2)
-        ],
+
         "U" : () => [
             sprite("road_up"),
             anchor("center"),
@@ -221,7 +206,7 @@ export default{
             scale(2)
         ],
         "1" : () => [
-            sprite("road_turn_1"),
+            sprite("road_turn_3"),
             anchor("center"),
             scale(2)
         ],
@@ -231,7 +216,7 @@ export default{
             scale(2)
         ],
         "3" : () => [
-            sprite("road_turn_3"),
+            sprite("road_turn_1"),
             anchor("center"),
             scale(2)
         ],
@@ -272,7 +257,7 @@ export default{
             area(),
             anchor("center"),
             "teleporter",
-            {destination : "plage_haut"}
+            {destination : "centre_ville"}
         ],
         "§" : () => [
             sprite("teleporter2"),
@@ -281,7 +266,7 @@ export default{
             area(),            
             anchor("center"),
             "teleporter",
-            {destination : "centre_ville"}            
-        ]
+            {destination : "plage_bas"}            
+        ]        
     }
 }

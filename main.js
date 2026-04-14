@@ -111,7 +111,7 @@ scene("game", (levelName) => {
             tiles: data.tiles
         });
     }
-    if (data==plage_bas || data==plage_haut){
+    else{
         addLevel(data.map, {
             tileWidth: 64,
             tileHeight: 64,
@@ -188,24 +188,12 @@ scene("game", (levelName) => {
     });          
 
     // actions lors des collisions
-    player.onCollide("museum", (batiment) => {
-
-        if (nb_key >= 5) {
-            dialogText.text = "Le musée a été inauguré en 1961. Il abrite l'une des plus prestigieuses collections impressionnistes de France (juste après le musée d'Orsay).";
-        } else {
-            dialogText.text = `Il te faut 5 clés minimum pour avoir plus d'information sur ce batiment. (${nb_key}/5)`;
-        }
-
-        dialogBox.hidden = false;
-        dialogText.hidden = false;
-        dialogBouton.hidden = false;        
-    });   
     player.onCollide("cabane_1", (batiment) => {
 
-        if (nb_key >= 5) {
+        if (nb_key >= 1) {
             dialogText.text = "Voici une cabane réservée par des familles. Les réservations se font soit auprès de la mairie soit entre particulier.";
         } else {
-            dialogText.text = `Il te faut 5 clés minimum pour avoir plus d'information sur cet cabane. (${nb_key}/5)`;
+            dialogText.text = `Il te faut 1 clés minimum pour avoir plus d'information sur cet cabane. (${nb_key}/1)`;
         }
 
         dialogBox.hidden = false;
@@ -224,18 +212,6 @@ scene("game", (levelName) => {
         dialogText.hidden = false;
         dialogBouton.hidden = false;        
     });   
-    player.onCollide("cabane_1", (batiment) => {
-
-        if (nb_key >= 10) {
-            dialogText.text = "Voici une cabane appartenant à un particulier.Il peut y déposer ses affaires pour pouvoir profiter de la plage sans avoir peur des vols.";
-        } else {
-            dialogText.text = `Il te faut 10 clés minimum pour avoir plus d'information sur cet cabane. (${nb_key}/10)`;
-        }
-
-        dialogBox.hidden = false;
-        dialogText.hidden = false;
-        dialogBouton.hidden = false;        
-    });  
 
     player.onCollide("key", (key) => {
         destroy(key);

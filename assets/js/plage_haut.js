@@ -2,7 +2,7 @@ export default{
     spawn: { x: 961, y: 1440 },    
     map :[
   "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
-  "@EEEEEEEEEEEEEEEEEEEEEEsttTU               @",
+  "@EEEEEEEEEEEEEEEEEEEEEEst*TU               @",
   "@EEEEEEEEEEEEEEEEEEEEEssttBU               @",
   "@EEEEEEEEEEEEEEEEEEEEsssttTU               @",
   "@EEEEEEEEEEEEEEEEEEEssssttBU               @",
@@ -71,6 +71,8 @@ export default{
         "E" : () => [
             sprite("water_tile"),          
             anchor("center"),
+            body({isStatic:true}),
+            area(),                            
             scale(2)
         ],
         "t" : () => [
@@ -276,6 +278,6 @@ export default{
             body({ isStatic: true }),
             area(),            
             anchor("center"),
-        ],               
+        ]              
     }
 }

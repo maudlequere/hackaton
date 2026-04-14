@@ -38,6 +38,8 @@ export default {
         "E" : () => [
             sprite("water_tile"),          
             anchor("center"),
+            body({isStatic:true}),
+            area(),            
             scale(4)
         ],
         "t" : () => [

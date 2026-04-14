@@ -1,29 +1,29 @@
 export default{
-    spawn: { x: 1600, y: 800},    
+    spawn: { x: 1600, y: 900},    
     map :[
-  "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
-  "@EEEEEEEEEEEEEEEEEEEEEEEEEsssttt*tfvFGDi                                      @",
-  "@EEEEEEEEEEEEEEEEEEEEEEEEEssssttUttF%%FG__i                                   @",
-  "@EEEEEEEEEEEEEEEEEEEEEEEEEEtttttUttfFfF%v%G______i                            @",
-  "@EEEEEEEEEEEEEEEEEEEEEEEEEEEttttUttttttfffF%F%f%FG_________________DabG______D@",
-  "@EEEEEEEEEEEEEEEEEEEEEEEEEEEttttUttttttttttfFfFff%fvf%f%F%FFF%Fv%Ff%cd%f%f%fv%@",
-  "@EEEEEEEEEEEEEEEEEEEEEEEEEEEEtttUttttttttttttttttfFfFFffvffFfFFfFFFfegFFvFfFfF@",
-  "@EEEEEEEEEEEEEEEEEEEEEEEEEEEEEttUttttttttttttttttttttttttttttttttttttttttttttt@",
-  "@EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEtUttttttttttGDtGDtGDtGDtGDtGDtGDttttttttttttttt@",
-  "@EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEtUttttttttttfFtFFtfFtfFtFFtfFtFfttttttttttttttt@",
-  "@EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEtUttttttttttttttttttttttttttttttttttttttttttttt@",
-  "@EEEEEEEEEEEEEEEEEEEEEEEEtttEEEt1SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSÂ§@",
-  "@EEEEEEEEEEEEEEEEEEEEEEEEttttttttttttttttttttttttttttttttttttttttttttttGDttttt@",
-  "@EEEEEEEEEEEEEEEEEEEEEEEEEtttttttttttttmnotttttttGDttGDttGDttttttttttttffttttt@",
-  "@EEEEEEEEEEEEEEEEEEEEEEEEEtttttGDttttttttttttttttfFttFFttfFttttttttttttttttttt@",
-  "@EEEEEEEEEEEEEEEEEEEEEEEEEtttttFfttttttttttttttttttttttttttttttttttttttttttttt@",
-  "@EEEEEEEEEEEEEEEEEEEEEEEEEtttttttttttGDttttttttttttttttttttEEEEEEEEEEEEEEEEEEE@",
-  "@EEEEEEEEEEEEEEEEEEEEEEEEEEstttttttttFFtttttttssssEEEEEEEEEEEEEEEEEEEEEEEEEEEE@",
-  "@EEEEEEEEEEEEEEEEEEEEEEEEEEssstttttttttttttsssssEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE@",
-  "@EEEEEEEEEEEEEEEEEEEEEEEEEEEsssssstttttttssssEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE@",
-  "@EEEEEEEEEEEEEEEEEEEEEEEEEEEEssssssssssssssEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE@",
-  "@EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEssssssssssEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE@",
-  "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+  "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
+  "@EEEEEEEEEEEEEEEEEsssttt§tfvFGDi                                      @",
+  "@EEEEEEEEEEEEEEEEEssssttUttF%%FG__i                                   @",
+  "@EEEEEEEEEEEEEEEEEEtttttUttfFfF%v%G______i                            @",
+  "@EEEEEEEEEEEEEEEEEEEttttUttttttfffF%F%f%FG_________________DabG______D@",
+  "@EEEEEEEEEEEEEEEEEEEttttUttttttttttfFfFff%fvf%f%F%FFF%Fv%Ff%cd%f%f%fv%@",
+  "@EEEEEEEEEEEEEEEEEEEEtttUttttttttttttttttfFfFFffvffFfFFfFFFfegFFvFfFfF@",
+  "@EEEEEEEEEEEEEEEEEEEEEttUttttttttttttttttttttttttttttttttttttttttttttt@",
+  "@EEEEEEEEEEEEEEEEEEEEEEtUttttttttttGDtGDtGDtGDtGDtGDtGDttttttttttttttt@",
+  "@EEEEEEEEEEEEEEEEEEEEEEtUttttttttttfFtFFtfFtfFtFFtfFtFfttttttttttttttt@",
+  "@EEEEEEEEEEEEEEEEEEEEEEtUttttttttttttttttttttttttttttttttttttttttttttt@",
+  "@EEEEEEEEEEEEEEEEtttEEEt1SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSÂ§@",
+  "@EEEEEEEEEEEEEEEEttttttttttttttttttttttttttttttttttttttttttttttGDttttt@",
+  "@EEEEEEEEEEEEEEEEEtttttttttttttmnotttttttGDttGDttGDttttttttttttffttttt@",
+  "@EEEEEEEEEEEEEEEEEtttttGDttttttttttttttttfFttFFttfFttttttttttttttttttt@",
+  "@EEEEEEEEEEEEEEEEEtttttFfttttttttttttttttttttttttttttttttttttttttttttt@",
+  "@EEEEEEEEEEEEEEEEEtttttttttttGDttttttttttttttttttttEEEEEEEEEEEEEEEEEEE@",
+  "@EEEEEEEEEEEEEEEEEEstttttttttFFtttttttssssEEEEEEEEEEEEEEEEEEEEEEEEEEEE@",
+  "@EEEEEEEEEEEEEEEEEEssstttttttttttttsssssEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE@",
+  "@EEEEEEEEEEEEEEEEEEEsssssstttttttssssEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE@",
+  "@EEEEEEEEEEEEEEEEEEEEssssssssssssssEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE@",
+  "@EEEEEEEEEEEEEEEEEEEEEEEssssssssssEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE@",
+  "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
 ],    
     tiles:{
     // textures
@@ -40,6 +40,8 @@ export default{
         "E" : () => [
             sprite("water_tile"),          
             anchor("center"),
+            body({isStatic:true}),
+            area(),            
             scale(2)
         ],
         "t" : () => [
@@ -294,6 +296,6 @@ export default{
             body({ isStatic: true }),
             area(),            
             anchor("center"),
-        ],
+        ]
     }
 }

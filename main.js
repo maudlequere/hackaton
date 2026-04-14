@@ -188,42 +188,77 @@ scene("game", (levelName) => {
     });          
 
     // actions lors des collisions
-    player.onCollide("hotel_ville", (batiment) => {
+    player.onCollide("museum", (batiment) => {
 
         if (nb_key >= 5) {
-            dialogText.text = "L'hôtel de ville est ...";
+            dialogText.text = "Le musée a été inauguré en 1961. Il abrite l'une des plus prestigieuses collections impressionnistes de France (juste après le musée d'Orsay).";
         } else {
-            dialogText.text = `Il te faut 5 clés pour avoir plus d'information sur ce batiment. (${nb_key}/5)`;
+            dialogText.text = `Il te faut 5 clés minimum pour avoir plus d'information sur ce batiment. (${nb_key}/5)`;
+        }
+
+        dialogBox.hidden = false;
+        dialogText.hidden = false;
+        dialogBouton.hidden = false;        
+    });   
+    player.onCollide("cabane_1", (batiment) => {
+
+        if (nb_key >= 5) {
+            dialogText.text = "Voici une cabane réservée par des familles. Les réservations se font soit auprès de la mairie soit entre particulier.";
+        } else {
+            dialogText.text = `Il te faut 5 clés minimum pour avoir plus d'information sur cet cabane. (${nb_key}/5)`;
         }
 
         dialogBox.hidden = false;
         dialogText.hidden = false;
         dialogBouton.hidden = false;        
     });
+    player.onCollide("cabane_2", (batiment) => {
+
+        if (nb_key >= 10) {
+            dialogText.text = "Voici une cabane appartenant à un particulier.Il peut y déposer ses affaires pour pouvoir profiter de la plage sans avoir peur des vols.";
+        } else {
+            dialogText.text = `Il te faut 10 clés minimum pour avoir plus d'information sur cet cabane. (${nb_key}/10)`;
+        }
+
+        dialogBox.hidden = false;
+        dialogText.hidden = false;
+        dialogBouton.hidden = false;        
+    });   
+    player.onCollide("cabane_1", (batiment) => {
+
+        if (nb_key >= 10) {
+            dialogText.text = "Voici une cabane appartenant à un particulier.Il peut y déposer ses affaires pour pouvoir profiter de la plage sans avoir peur des vols.";
+        } else {
+            dialogText.text = `Il te faut 10 clés minimum pour avoir plus d'information sur cet cabane. (${nb_key}/10)`;
+        }
+
+        dialogBox.hidden = false;
+        dialogText.hidden = false;
+        dialogBouton.hidden = false;        
+    });  
 
     player.onCollide("key", (key) => {
         destroy(key);
         nb_key=nb_key + 1;
-        console.log("Clés :", nb_key);
-        keyText.text = `🔑 Nombre de clés : ${nb_key}`;
+        console.log("Tickets :", nb_key);
+        keyText.text = `Nombre de tickets: ${nb_key}`;
     });    
-
     player.onCollide("teleporter", (teleporter) => {
         go("game", teleporter.destination); 
     });
 
     // afficher le nombre de clé
     const keyBox = add([
-        rect(200, 30),
-        pos(360, 10),
+        rect(300, 30),
+        pos(600, 10),
         color(255,215,0),
         opacity(0.6),
         fixed(),
         z(9),
     ]);
     const keyText = add([
-        text(`🔑 Nombre de clés : ${nb_key}`, { size: 16 }),
-        pos(360, 14),
+        text(` Nombre de tickets : ${nb_key}`, { size: 16 }),
+        pos(600, 14),
         color(0,0,0),
         fixed(),
         z(10),
@@ -231,23 +266,23 @@ scene("game", (levelName) => {
 
     // afficher les messages
     const dialogBox = add([
-        rect(640, 60),
-        pos(5, 400),
+        rect(1224, 150),
+        pos(0, 640),
         color(0, 0, 0),
         opacity(0.8),
         fixed(),
         z(9),
     ]);
     const dialogText = add([
-        text("", { size: 16 }),
-        pos(5, 415),
+        text("", { size: 24 }),
+        pos(20, 680),
         color(255, 255, 255),
         fixed(),
         z(10),
     ]);  
     const dialogBouton = add([
-        text("cliquer sur E pour passer",{size:12}),
-        pos(400,450),
+        text("cliquer sur E pour passer",{size:16}),
+        pos(800,740),
         color(255,255,255),
         fixed(),
         z(10),

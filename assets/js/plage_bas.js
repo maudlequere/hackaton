@@ -1,27 +1,29 @@
 export default{
-    spawn: { x: 200, y: 200 },    
+    spawn: { x: 1600, y: 800},    
     map :[
-  "EEEEEEEEEEEEEEEEEEEEEEEEEsssttt*tfvFGDi                                      ",
-  "EEEEEEEEEEEEEEEEEEEEEEEEEssssttUttF%%FG__i                                   ",
-  "EEEEEEEEEEEEEEEEEEEEEEEEEEtttttUttfFfF%v%G______i                            ",
-  "EEEEEEEEEEEEEEEEEEEEEEEEEEEttttUttttttfffF%F%f%FG_________________DabG______D",
-  "EEEEEEEEEEEEEEEEEEEEEEEEEEEttttUttttttttttfFfFff%fvf%f%F%FFF%Fv%Ff%cd%f%f%fv%",
-  "EEEEEEEEEEEEEEEEEEEEEEEEEEEEtttUttttttttttttttttfFfFFffvffFfFFfFFFfegFFvFfFfF",
-  "EEEEEEEEEEEEEEEEEEEEEEEEEEEEEttUttttttttttttttttttttttttttttttttttttttttttttt",
-  "EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEtUttttttttttGDtGDtGDtGDtGDtGDtGDttttttttttttttt",
-  "EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEtUttttttttttfFtFFtfFtfFtFFtfFtFfttttttttttttttt",
-  "EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEtUttttttttttttttttttttttttttttttttttttttttttttt",
-  "EEEEEEEEEEEEEEEEEEEEEEEEtttEEEt3SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSÂ§",
-  "EEEEEEEEEEEEEEEEEEEEEEEEttttttttttttttttttttttttttttttttttttttttttttttGDttttt",
-  "EEEEEEEEEEEEEEEEEEEEEEEEEtttttttttttttmnotttttttGDttGDttGDttttttttttttffttttt",
-  "EEEEEEEEEEEEEEEEEEEEEEEEEtttttGDttttttttttttttttfFttFFttfFttttttttttttttttttt",
-  "EEEEEEEEEEEEEEEEEEEEEEEEEtttttFfttttttttttttttttttttttttttttttttttttttttttttt",
-  "EEEEEEEEEEEEEEEEEEEEEEEEEtttttttttttGDttttttttttttttttttttEEEEEEEEEEEEEEEEEEE",
-  "EEEEEEEEEEEEEEEEEEEEEEEEEEstttttttttFFtttttttssssEEEEEEEEEEEEEEEEEEEEEEEEEEEE",
-  "EEEEEEEEEEEEEEEEEEEEEEEEEEssstttttttttttttsssssEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE",
-  "EEEEEEEEEEEEEEEEEEEEEEEEEEEsssssstttttttssssEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE",
-  "EEEEEEEEEEEEEEEEEEEEEEEEEEEEssssssssssssssEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE",
-  "EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEssssssssssEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE"
+  "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
+  "@EEEEEEEEEEEEEEEEEEEEEEEEEsssttt*tfvFGDi                                      @",
+  "@EEEEEEEEEEEEEEEEEEEEEEEEEssssttUttF%%FG__i                                   @",
+  "@EEEEEEEEEEEEEEEEEEEEEEEEEEtttttUttfFfF%v%G______i                            @",
+  "@EEEEEEEEEEEEEEEEEEEEEEEEEEEttttUttttttfffF%F%f%FG_________________DabG______D@",
+  "@EEEEEEEEEEEEEEEEEEEEEEEEEEEttttUttttttttttfFfFff%fvf%f%F%FFF%Fv%Ff%cd%f%f%fv%@",
+  "@EEEEEEEEEEEEEEEEEEEEEEEEEEEEtttUttttttttttttttttfFfFFffvffFfFFfFFFfegFFvFfFfF@",
+  "@EEEEEEEEEEEEEEEEEEEEEEEEEEEEEttUttttttttttttttttttttttttttttttttttttttttttttt@",
+  "@EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEtUttttttttttGDtGDtGDtGDtGDtGDtGDttttttttttttttt@",
+  "@EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEtUttttttttttfFtFFtfFtfFtFFtfFtFfttttttttttttttt@",
+  "@EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEtUttttttttttttttttttttttttttttttttttttttttttttt@",
+  "@EEEEEEEEEEEEEEEEEEEEEEEEtttEEEt1SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSÂ§@",
+  "@EEEEEEEEEEEEEEEEEEEEEEEEttttttttttttttttttttttttttttttttttttttttttttttGDttttt@",
+  "@EEEEEEEEEEEEEEEEEEEEEEEEEtttttttttttttmnotttttttGDttGDttGDttttttttttttffttttt@",
+  "@EEEEEEEEEEEEEEEEEEEEEEEEEtttttGDttttttttttttttttfFttFFttfFttttttttttttttttttt@",
+  "@EEEEEEEEEEEEEEEEEEEEEEEEEtttttFfttttttttttttttttttttttttttttttttttttttttttttt@",
+  "@EEEEEEEEEEEEEEEEEEEEEEEEEtttttttttttGDttttttttttttttttttttEEEEEEEEEEEEEEEEEEE@",
+  "@EEEEEEEEEEEEEEEEEEEEEEEEEEstttttttttFFtttttttssssEEEEEEEEEEEEEEEEEEEEEEEEEEEE@",
+  "@EEEEEEEEEEEEEEEEEEEEEEEEEEssstttttttttttttsssssEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE@",
+  "@EEEEEEEEEEEEEEEEEEEEEEEEEEEsssssstttttttssssEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE@",
+  "@EEEEEEEEEEEEEEEEEEEEEEEEEEEEssssssssssssssEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE@",
+  "@EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEssssssssssEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE@",
+  "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
 ],    
     tiles:{
     // textures
@@ -180,14 +182,16 @@ export default{
             area(),
             body({ isStatic: true }),
             anchor("center"),
-            scale(2)
+            scale(2),
+            "shipowner"
         ],
         "g" : () => [
             sprite("shipowner_house_1_2"),
             area(),
             body({ isStatic: true }),
             anchor("center"),
-            scale(2)
+            scale(2),
+            "shipowner"
         ],
         "m" : () => [
             sprite("modern_art_museum_0_0"),
@@ -201,7 +205,8 @@ export default{
             area(),
             body({ isStatic: true }),
             anchor("center"),
-            scale(2)
+            scale(2),
+            "museum"
         ],
         "o" : () => [
             sprite("modern_art_museum_2_0"),
@@ -282,6 +287,13 @@ export default{
             anchor("center"),
             "teleporter",
             {destination : "centre_ville"}            
+        ],
+        "@" : () =>[
+            sprite("void_tile"),
+            scale(2),
+            body(),
+            area({ isSensor: true }),            
+            anchor("center"),
         ]
     }
 }

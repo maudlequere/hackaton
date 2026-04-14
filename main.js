@@ -1,5 +1,21 @@
-import k from "./kaplay";
-import loadAssets from "./assets";
+import kaplay from "https://unpkg.com/kaplay@3001.0.19/dist/kaplay.mjs";
+import loadPlayer from "./assets/js/loadplayer.js";
+import centre_ville from "./assets/js/centre_ville.js";
+import plage from "./assets/js/plage.js";
+import batiment from "./assets/js/loadbatiment.js";
+
+const k = kaplay({
+    global: true,
+    width: 640,
+    height: 480,
+    letterbox: true,
+    crisp: true,    
+    background:[0,0,0]
+});
+console.log("Kaplay initialisé ✅", k);
+
+loadSprite("key","assets/sprites/objets/key.png");
+let nb_key = 0;
 
 const startMenu = document.getElementById("start-menu");
 const playButton = document.getElementById("btn-play");
@@ -51,7 +67,7 @@ function startGame() {
 
     gameStarted = true;
     if (startMenu) startMenu.style.display = "none";
-    go("game", "foret");
+    go("game","centre_ville");
 }
 
 if (playButton) {
@@ -66,86 +82,28 @@ if (goalButton) {
     goalButton.addEventListener("click", () => togglePanel(goalPanel));
 }
 
-const mapsData = {
-    "foret": {
-        sprite: "map_foret",
-        spawn: { x: 500, y: 500 },
-        collisions: [
-            { x: 1, y: -2, w: 141, h: 158 },
-            { x: 142, y: -2, w: 70, h: 65 },
-            { x: 1, y: 270, w: 136, h: 188 },
-            { x: 0, y: 457, w: 71, h: 85 },
-            { x: 0, y: 583, w: 72, h: 179 },
-            { x: 71, y: 686, w: 78, h: 77 },
-            { x: 148, y: 729, w: 54, h: 37 },
-            { x: 282, y: 383, w: 208, h: 105 },
-            { x: 283, y: 484, w: 67, h: 61 },
-            { x: 488, y: 426, w: 76, h: 116 },
-            { x: 420, y: 486, w: 76, h: 51 },
-            { x: 566, y: 719, w: 351, h: 47 },
-            { x: 713, y: 581, w: 137, h: 139 },
-            { x: 851, y: 639, w: 64, h: 82 },
-            { x: 637, y: 616, w: 82, h: 99 },
-            { x: 838, y: 538, w: 86, h: 76 },
-            { x: 1205, y: 545, w: 206, h: 153 },
-            { x: 1260, y: 694, w: 151, h: 76 },
-            { x: 1265, y: 373, w: 143, h: 168 },
-            { x: 421, y: 58, w: 360, h: 167 },
-            { x: 871, y: 150, w: 206, h: 223 },
-            { x: 1126, y: 227, w: 76, h: 74 },
-            { x: 1269, y: -3, w: 137, h: 232 },
-            { x: 1182, y: 65, w: 96, h: 123 }
-        ],
-        doors: [
-            { x: 1350, y: 300, w: 50, h: 100, nextScene: "grotte" } 
-        ]
-    },
-    "grotte": {
-        sprite: "map_grotte",
-        spawn: { x: 150, y: 400 },
-        collisions: [],
-        doors: [
-            { x: 1350, y: 200, w: 50, h: 100, nextScene: "foret" } 
-        ]
-    }
+loadPlayer();
+
+// différentes maps
+const levels = {
+    "centre_ville": centre_ville,
+    "plage":plage,
 };
 
-loadAssets();
-
 scene("game", (levelName) => {
-    const data = mapsData[levelName];
 
-    add([
-        sprite(data.sprite),
-        pos(0, 0)
-    ]);
+    const data = levels[levelName];
 
-    data.collisions.forEach(c => {
-        add([
-            rect(c.w, c.h),
-            pos(c.x, c.y),
-            area(),
-            body({ isStatic: true }),
-            opacity(0),
-            "wall"
-        ]);
-    });
-
-    // --- GÉNÉRATION DES PORTES AVEC MARQUEUR VISIBLE ---
-    if (data.doors) {
-        data.doors.forEach(d => {
-            add([
-                rect(d.w, d.h),
-                pos(d.x, d.y),
-                area(),
-                opacity(0.5), // On le met à 0.5 pour voir le marqueur
-                color(0, 255, 0), // Vert pour les téléporteurs
-                outline(2), // Ajoute une bordure pour mieux le voir
-                "door",
-                { destination: d.nextScene } 
-            ]);
-        });
+    if (!data) {
+        console.error(`Niveau introuvable : ${levelName}`);
+        return;
     }
+
+    addLevel(data.map, {
+        tileWidth: 32,
+        tileHeight: 32,
+        tiles: data.tiles
+    });
 
     const player = add([
         sprite("player-down-stand-1"),
@@ -163,10 +121,7 @@ scene("game", (levelName) => {
         }
     ]);
 
-    player.onCollide("door", (door) => {
-        go("game", door.destination); 
-    });
-
+    // contrôle
     onUpdate(() => { 
         let moveX = 0;
         let moveY = 0;
@@ -212,6 +167,81 @@ scene("game", (levelName) => {
 
         setCamPos(player.pos); // Correction camPos suggérée par la console
     });
+    onKeyPress("e", () => {
+        dialogBox.hidden = true;
+        dialogText.hidden = true;
+        dialogBouton.hidden = true;
+    });          
+
+    // actions lors des collisions
+    player.onCollide("hotel_ville", (batiment) => {
+
+        if (nb_key >= 5) {
+            dialogText.text = "L'hôtel de ville est ...";
+        } else {
+            dialogText.text = `Il te faut 5 clés pour avoir plus d'information sur ce batiment. (${nb_key}/5)`;
+        }
+
+        dialogBox.hidden = false;
+        dialogText.hidden = false;
+        dialogBouton.hidden = false;        
+    });
+
+    player.onCollide("key", (key) => {
+        destroy(key);
+        nb_key=nb_key + 1;
+        console.log("Clés :", nb_key);
+        keyText.text = `🔑 Nombre de clés : ${nb_key}`;
+    });    
+
+    player.onCollide("door", (door) => {
+        go("game", door.destination); 
+    });
+
+    // afficher le nombre de clé
+    const keyBox = add([
+        rect(200, 30),
+        pos(360, 10),
+        color(255,215,0),
+        opacity(0.6),
+        fixed(),
+        z(9),
+    ]);
+    const keyText = add([
+        text(`🔑 Nombre de clés : ${nb_key}`, { size: 16 }),
+        pos(360, 14),
+        color(0,0,0),
+        fixed(),
+        z(10),
+    ]);
+
+    // afficher les messages
+    const dialogBox = add([
+        rect(640, 60),
+        pos(5, 400),
+        color(0, 0, 0),
+        opacity(0.8),
+        fixed(),
+        z(9),
+    ]);
+    const dialogText = add([
+        text("", { size: 16 }),
+        pos(5, 415),
+        color(255, 255, 255),
+        fixed(),
+        z(10),
+    ]);  
+    const dialogBouton = add([
+        text("cliquer sur E pour passer",{size:12}),
+        pos(400,450),
+        color(255,255,255),
+        fixed(),
+        z(10),
+    ]);
+    dialogBox.hidden = true;
+    dialogText.hidden = true;
+    dialogBouton.hidden = true;
+
 });
 
 onLoad(() => {

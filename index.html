@@ -1,30 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Mon RPG Kaplay</title>
-    <link rel="stylesheet" href="assets/style.css">
+    <title>Haveria</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <div id="start-menu" class="menu-overlay">
         <div class="menu-card">
-            <h1 class="menu-title">Mon RPG</h1>
-            <p class="menu-subtitle">Choisis une option pour commencer</p>
+            <h1 class="menu-title">HAVERIA</h1>
+        <p class="menu-subtitle">Avant de commencer, n'oubie pas de regarder le but du jeu et surtout les touches</p>
 
             <div class="menu-actions">
                 <button id="btn-play" class="menu-btn primary">Jouer</button>
                 <button id="btn-keys" class="menu-btn">Touches</button>
+                <div id="panel-keys" class="info-panel" hidden>
+                    <p>D&eacute;placement : fl&egrave;ches du clavier</p> <!-- &eacute; => é et 	&egrave; => è -->
+                    <ul>
+                        <li><p>&#x21E7; : haut </p></li>
+                        <li><p>&#x21E9; : bas</p></li>
+                        <li><p>&#x21E6; : gauche</p> </li>
+                        <li><p>&#x21E8; : droite</p></li>
+                    </ul>
+                    <p>Interaction : </p>
+                    <ul>
+                        <li>E : passer dialogue</li>
+                        <li>objet ramass&eacute; automatiquement au survol</li>
+                    </ul>
+                </div>                
                 <button id="btn-goal" class="menu-btn">But du jeu</button>
             </div>
-
-            <div id="panel-keys" class="info-panel" hidden>
-                <h2>Touches</h2>
-                <p>Deplacement : fleches du clavier</p>
-                <p>Passe dans les zones vertes pour changer de map.</p>
-            </div>
-
             <div id="panel-goal" class="info-panel" hidden>
-                <h2>But du jeu</h2>
-                <p>Explore la foret et trouve les passages vers les autres zones.</p>
+                <p>Explore le centre-ville du havre et trouve les cl&eacute;s cach&eacute;es sur la map pour acc&eacute;der &agrave; des informations in&eacute;dites.</p><!-- &agrave; => à -->
             </div>
         </div>
     </div>

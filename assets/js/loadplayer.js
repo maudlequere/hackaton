@@ -1,9 +1,6 @@
-import k from "./kaplay";
+import kaplay from "https://unpkg.com/kaplay@3001.0.19/dist/kaplay.mjs";
 
-export default function loadAssets() {
-    loadSprite("map_foret", "assets/sprites/image.png");
-    loadSprite("map_grotte", "assets/sprites/image.png");
-
+export default function loadPlayer(){
     loadSprite("player-down-stand-1", "assets/sprites/player/stand_1_face.png");
     loadSprite("player-down-stand-2", "assets/sprites/player/stand_2_face.png");
     loadSprite("player-down-walk-1", "assets/sprites/player/wal_1_face.png");

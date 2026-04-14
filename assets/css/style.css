@@ -49,8 +49,8 @@ body {
 	font-size: 1.2rem;
 	font-weight: 700;
 	cursor: pointer;
-	color: #173118;
-	background: #b6e38e;
+	color: #111111;
+	background: #8ee3d3;
 	transition: transform 120ms ease, filter 120ms ease;
 }
 
@@ -62,7 +62,7 @@ body {
 .menu-btn.primary {
 	font-size: 1.5rem;
 	padding: 20px;
-	background: linear-gradient(90deg, #f9ffaf, #d4ff7f);
+	background: #69efd6;
 }
 
 .info-panel {
@@ -70,15 +70,16 @@ body {
 	padding: 14px;
 	border-radius: 12px;
 	background: rgba(0, 0, 0, 0.24);
-	border: 1px solid rgba(186, 234, 141, 0.45);
+	border: 1px solid rgba(79, 164, 244, 0.45);
 }
 
 .info-panel h2 {
 	margin: 0 0 8px;
-	font-size: 1.1rem;
+	font-size: 24px;
 }
 
 .info-panel p {
 	margin: 6px 0;
 	line-height: 1.4;
+	font-size: 16px;
 }

@@ -1,19 +1,22 @@
 import kaplay from "https://unpkg.com/kaplay@3001.0.19/dist/kaplay.mjs";
-import loadPlayer from "./assets/js/loadplayer.js";
+import loadPlayer from "./loadplayer.js";
 import centre_ville from "./assets/js/centre_ville.js";
-import plage from "./assets/js/plage.js";
-import batiment from "./assets/js/loadbatiment.js";
+import plage_bas from "./assets/js/plage_bas.js";
+import loadcentreville from "./loadcentreville.js";
+import loadplage from "./loadplage.js";
 
 const k = kaplay({
     global: true,
-    width: 640,
-    height: 480,
+    width: 1224,
+    height: 768,
     letterbox: true,
     crisp: true,    
     background:[0,0,0]
 });
 console.log("Kaplay initialisé ✅", k);
-
+loadcentreville();
+loadPlayer();
+loadplage();
 loadSprite("key","assets/sprites/objets/key.png");
 let nb_key = 0;
 
@@ -67,7 +70,7 @@ function startGame() {
 
     gameStarted = true;
     if (startMenu) startMenu.style.display = "none";
-    go("game","centre_ville");
+    go("game","plage_bas");
 }
 
 if (playButton) {
@@ -87,7 +90,7 @@ loadPlayer();
 // différentes maps
 const levels = {
     "centre_ville": centre_ville,
-    "plage":plage,
+    "plage_bas":plage_bas,
 };
 
 scene("game", (levelName) => {
@@ -99,11 +102,20 @@ scene("game", (levelName) => {
         return;
     }
 
-    addLevel(data.map, {
-        tileWidth: 32,
-        tileHeight: 32,
-        tiles: data.tiles
-    });
+    if (data==centre_ville){
+        addLevel(data.map, {
+            tileWidth: 128,
+            tileHeight: 128,
+            tiles: data.tiles
+        });
+    }
+    if (data==plage_bas){
+        addLevel(data.map, {
+            tileWidth: 64,
+            tileHeight: 64,
+            tiles: data.tiles
+        });
+    }    
 
     const player = add([
         sprite("player-down-stand-1"),

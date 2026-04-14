@@ -291,9 +291,9 @@ export default{
         "@" : () =>[
             sprite("void_tile"),
             scale(2),
-            body(),
-            area({ isSensor: true }),            
+            body({ isStatic: true }),
+            area(),            
             anchor("center"),
-        ]
+        ],
     }
 }

@@ -20,7 +20,8 @@ export default {
         "@l_DUttttUTUGD@",
         "@vFfUthhtUBU%f@",
         "@SSS4thhtUv5S3@",
-        "@ttttt*tt5S4TU@"
+        "@ttttt*tt5S4TU@",
+        "@@@@@@@@@@@@@@@",
     ],
     tiles:{
     // textures

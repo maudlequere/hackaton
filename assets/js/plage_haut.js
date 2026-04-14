@@ -2,7 +2,7 @@ export default{
     spawn: { x: 961, y: 1440 },    
     map :[
   "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@",
-  "@EEEEEEEEEEEEEEEEEEEEEEst§TU               @",
+  "@EEEEEEEEEEEEEEEEEEEEEEsttTU               @",
   "@EEEEEEEEEEEEEEEEEEEEEssttBU               @",
   "@EEEEEEEEEEEEEEEEEEEEsssttTU               @",
   "@EEEEEEEEEEEEEEEEEEEssssttBU               @",
@@ -273,9 +273,9 @@ export default{
         "@" : () =>[
             sprite("void_tile"),
             scale(2),
-            body(),
-            area({ isSensor: true }),            
+            body({ isStatic: true }),
+            area(),            
             anchor("center"),
-        ]                
+        ],               
     }
 }

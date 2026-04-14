@@ -10,7 +10,9 @@ body {
 	inset: 0;
 	display: grid;
 	place-items: center;
-	background: linear-gradient(140deg, rgba(8, 19, 8, 0.85), rgba(11, 41, 25, 0.78));
+	background: url("../images/ecran_accueil.png");
+	background-size: cover;
+	background-position: center;
 	z-index: 10;
 }
 
@@ -18,10 +20,10 @@ body {
 	width: min(92vw, 520px);
 	padding: 30px;
 	border-radius: 22px;
-	background: rgba(17, 34, 19, 0.92);
-	border: 2px solid #8bd07d;
+	background: rgba(17, 34, 51, 0.92);
+	border: 2px solid #4a90e2;
 	box-shadow: 0 20px 70px rgba(0, 0, 0, 0.5);
-	color: #eaf6dc;
+	color: #c7ddf5;
 }
 
 .menu-title {
@@ -34,7 +36,7 @@ body {
 .menu-subtitle {
 	margin: 12px 0 24px;
 	text-align: center;
-	color: #b9e9ac;
+	color: #a5c8e1;
 }
 
 .menu-actions {
@@ -50,7 +52,7 @@ body {
 	font-weight: 700;
 	cursor: pointer;
 	color: #111111;
-	background: #8ee3d3;
+	background: #5b9ef5;
 	transition: transform 120ms ease, filter 120ms ease;
 }
 
@@ -62,7 +64,7 @@ body {
 .menu-btn.primary {
 	font-size: 1.5rem;
 	padding: 20px;
-	background: #69efd6;
+	background: #4a90e2;
 }
 
 .info-panel {
